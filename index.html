@@ -8,14 +8,12 @@
   h2 { font-size: 22px; font-weight: 500; line-height: 1.3; margin-bottom: 0.75rem; }
   p { font-size: 15px; line-height: 1.7; color: var(--color-text-secondary, #555); margin-bottom: 1rem; }
   p:last-child { margin-bottom: 0; }
-
-  .pillar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 0.75rem; }
   .pillar-card { background: var(--color-background-secondary, #f9f9f7); border: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.1)); border-radius: 12px; padding: 1.25rem; }
   .pillar-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .pillar-owner { font-size: 12px; color: var(--color-text-tertiary, #999); margin-bottom: 0.75rem; }
   .pillar-desc { font-size: 13px; line-height: 1.6; color: var(--color-text-secondary, #555); }
-
-  .north-stars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .north-stars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 0.75rem; }
   .star-card { border-radius: 12px; padding: 1.5rem; }
   .star-card.reliability { background: #E6F1FB; }
   .star-card.efficiency { background: #EEEDFE; }
@@ -28,28 +26,16 @@
   .star-card.reliability .star-desc { color: #185FA5; }
   .star-card.efficiency .star-desc { color: #534AB7; }
   .star-card.maturity .star-desc { color: #0F6E56; }
-  .star-items { margin-top: 0.75rem; }
-  .star-item { font-size: 12px; display: flex; align-items: flex-start; gap: 6px; margin-bottom: 4px; }
-  .star-card.reliability .star-item { color: #185FA5; }
-  .star-card.efficiency .star-item { color: #534AB7; }
-  .star-card.maturity .star-item { color: #0F6E56; }
-  .dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
-  .reliability .dot { background: #185FA5; }
-  .efficiency .dot { background: #534AB7; }
-  .maturity .dot { background: #0F6E56; }
-
   .bau-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 1.5rem; }
   .bau-item { background: var(--color-background-secondary); border-radius: 8px; padding: 0.85rem 1rem; }
   .bau-title { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
   .bau-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
-
   .q1-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 13px; }
   .q1-table th { text-align: left; font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary, #999); padding: 0 0 0.75rem; border-bottom: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.12)); }
   .q1-table td { padding: 0.75rem 0; border-bottom: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.07)); vertical-align: top; }
   .q1-table td:first-child { font-weight: 500; width: 36%; padding-right: 1.5rem; color: var(--color-text-primary); }
   .q1-table td:last-child { color: var(--color-text-secondary, #555); line-height: 1.6; }
   .q1-table tr:last-child td { border-bottom: none; }
-
   .person-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem; margin-top: 1.5rem; }
   .person-col { display: flex; flex-direction: column; gap: 1.5rem; }
   .person-section { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -65,17 +51,14 @@
   .work-item { background: var(--color-background-secondary, #f9f9f7); border-radius: 8px; padding: 0.6rem 0.85rem; }
   .work-item-title { font-size: 12px; font-weight: 500; margin-bottom: 1px; }
   .work-item-desc { font-size: 11px; color: var(--color-text-secondary, #666); line-height: 1.5; }
-
   .outcomes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
   .outcome-card { border: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.1)); border-radius: 12px; padding: 1.25rem; }
   .outcome-card.wide { grid-column: span 3; }
   .outcome-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary, #999); margin-bottom: 0.5rem; }
   .outcome-text { font-size: 13px; line-height: 1.6; color: var(--color-text-secondary, #555); }
-
   .nav { display: flex; justify-content: center; gap: 8px; margin-bottom: 1.5rem; flex-wrap: wrap; }
   .nav-btn { font-size: 12px; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary, rgba(0,0,0,0.2)); background: transparent; color: var(--color-text-secondary); cursor: pointer; text-decoration: none; }
   .nav-btn:hover { background: var(--color-background-secondary); }
-
   @media (max-width: 600px) {
     .pillar-grid, .north-stars, .bau-grid, .person-grid, .outcomes-grid { grid-template-columns: 1fr; }
     .outcome-card.wide { grid-column: span 1; }
@@ -97,12 +80,14 @@
   <div class="slide" id="s1">
     <div class="slide-label">01 — What we do</div>
     <h1>Product Operations</h1>
-    <p>MetaMask doubled revenue last year. Scaling from 1 to 10 requires the product organisation to ship the right things, faster, with fewer misses. Product Operations removes the friction that makes that hard — and AI is at the centre of how we do it.</p>
+    <p>MetaMask went from 0 to 1 last year, doubling our revenue and reaching parity with our competitors. This year, we are scaling from 1 to 10, creating a product that our users love and recommend. This change requires the product organisation to ship the right things, faster, with fewer misses.</p>
+    <p>Product Operations makes that possible. We remove the expensive friction: delivery risk that surfaces too late, decisions made without data, user insight that never reaches the roadmap, product managers doing admin tasks instead of focusing on the big picture.</p>
+    <p style="margin-bottom: 0.75rem;">Our team is organised across three pillars, with one goal: make every PM more effective:</p>
     <div class="pillar-grid">
       <div class="pillar-card">
         <div class="pillar-name">Business insights</div>
         <div class="pillar-owner">Adrien Guguin</div>
-        <div class="pillar-desc">The right bets get made, and underperformance is caught early</div>
+        <div class="pillar-desc">The right bets get made, underperformance is caught early</div>
       </div>
       <div class="pillar-card">
         <div class="pillar-name">Market & user insights</div>
@@ -120,32 +105,19 @@
   <div class="slide" id="s2">
     <div class="slide-label">02 — Goals</div>
     <h2>What we are driving towards</h2>
-    <p>Three outcomes that define what success looks like for Product Operations at MetaMask.</p>
+    <p style="margin-bottom: 0.75rem;">Three outcomes that define what success looks like for Product Operations at MetaMask.</p>
     <div class="north-stars">
       <div class="star-card reliability">
         <div class="star-title">Reliability</div>
-        <div class="star-desc">MetaMask ships predictably, with fewer surprises and more confidence at every stage.</div>
-        <div class="star-items">
-          <div class="star-item"><span class="dot"></span>Predictable delivery</div>
-          <div class="star-item"><span class="dot"></span>Raised quality bar</div>
-          <div class="star-item"><span class="dot"></span>Reduced ambiguity</div>
-        </div>
+        <div class="star-desc">MetaMask ships predictably, with higher quality UX and performance. No surprises. Full visibility, all the time.</div>
       </div>
       <div class="star-card efficiency">
         <div class="star-title">Efficiency</div>
-        <div class="star-desc">The product organisation moves faster. AI is embedded in how we work, from how PMs query data to how insights are summarised and surfaced.</div>
-        <div class="star-items">
-          <div class="star-item"><span class="dot"></span>AI-first workflows</div>
-          <div class="star-item"><span class="dot"></span>Cross-functional glue</div>
-        </div>
+        <div class="star-desc">The product organisation moves faster. AI is embedded in how we work. Every PM knows exactly what to do, and has everything they need to do it.</div>
       </div>
       <div class="star-card maturity">
         <div class="star-title">Maturity</div>
-        <div class="star-desc">Insights reach the roadmap. Data is trustworthy. Processes are consistent and built to last.</div>
-        <div class="star-items">
-          <div class="star-item"><span class="dot"></span>Insights to roadmap</div>
-          <div class="star-item"><span class="dot"></span>IPO-ready foundations</div>
-        </div>
+        <div class="star-desc">Insights are embedded into the roadmap. Data is trustworthy. Processes are consistent and built to last.<br><br>We are ready to IPO.</div>
       </div>
     </div>
   </div>
@@ -153,7 +125,7 @@
   <div class="slide" id="s3">
     <div class="slide-label">03 — BAU</div>
     <h2>What we run every week</h2>
-    <p>Before any project work, the team owns and facilitates this operating rhythm on a rotating schedule.</p>
+    <p>Before any project work, the team owns and facilitates this operating rhythm.</p>
     <div class="bau-grid">
       <div class="bau-item">
         <div class="bau-title">Product Review</div>
@@ -201,13 +173,13 @@
     <table class="q1-table">
       <thead><tr><th>What we built</th><th>Revenue outcome</th></tr></thead>
       <tbody>
-        <tr><td>Jira rebuilt from the ground up</td><td>MetaMask has a single source of truth for the first time. Leadership has a real portfolio view of what is in flight and what is at risk.</td></tr>
+        <tr><td>Jira rebuilt from the ground up</td><td>MetaMask has a single source of truth for the first time. Leadership will have a real portfolio view of what is in flight and what is at risk in Q2.</td></tr>
         <tr><td>Delivery Health Check launched</td><td>Delivery risk on revenue initiatives is visible bi-weekly. Support is mobilised before a miss, not after.</td></tr>
         <tr><td>MetaMask Pulse launched</td><td>Leadership sees every lane's wins and risks weekly, without reading a single Slack channel</td></tr>
         <tr><td>Product Review relaunched</td><td>Expensive rework is caught before development begins, not after</td></tr>
         <tr><td>Actable audit initiated</td><td>Data quality problem solved proactively. Bad data will not drive bad revenue decisions.</td></tr>
-        <tr><td>Joined Consensys AI group led by CTO Rob Dawson</td><td>MetaMask PMs are on the fast track for AI tool access across Consensys</td></tr>
-        <tr><td>Facilitated secure Mixpanel MCP gateway</td><td>After a direct Claude connection was denied by security, ProdOps found a compliant path so PMs can query Mixpanel data with AI</td></tr>
+        <tr><td>Joined Consensys AI group</td><td>Advocating for MetaMask PMs to be on the fast track for AI tool access across Consensys, while security decisions are still slow</td></tr>
+        <tr><td>Facilitated secure MCP gateway</td><td>After a direct Claude connection was denied by security, ProdOps found a compliant path so PMs can query Mixpanel data with AI</td></tr>
         <tr><td>Created PM AI playbook</td><td>PMs can query codebases directly via Cursor, reducing reliance on EMs and speeding up decisions that touch code</td></tr>
         <tr><td>Team built from scratch</td><td>A functioning ProdOps team, operational from day one</td></tr>
       </tbody>
@@ -228,7 +200,7 @@
             <div class="work-item"><div class="work-item-title">Data in product planning</div><div class="work-item-desc">Instrumentation built before launches, not after</div></div>
             <div class="work-item"><div class="work-item-title">Actable audit completion</div><div class="work-item-desc">Clean analytics embedded into planning and release management</div></div>
             <div class="work-item"><div class="work-item-title">Mixpanel ownership</div><div class="work-item-desc">Full transition from Data team, Mixpanel/Claude connection, PM self-serve</div></div>
-            <div class="work-item"><div class="work-item-title">Reporting, release management and dependency mapping in Jira</div><div class="work-item-desc">Confidence, delivery slip, and blockers visible in real time</div></div>
+            <div class="work-item"><div class="work-item-title">Reporting & release management in Jira</div><div class="work-item-desc">Confidence, delivery slip, and blockers visible in real time</div></div>
           </div>
         </div>
         <div class="person-section">
@@ -238,7 +210,7 @@
           </div>
           <div class="work-items">
             <div class="work-item"><div class="work-item-title">Research in Jira</div><div class="work-item-desc">Findings surface at the moment PMs make decisions</div></div>
-            <div class="work-item"><div class="work-item-title">CS integration</div><div class="work-item-desc">Intercom connected to HeyMarvin so PMs self-serve user problem data</div></div>
+            <div class="work-item"><div class="work-item-title">CS integration</div><div class="work-item-desc">Intercom dashboards audited and rebuilt. Connected to HeyMarvin so CS signals are accessible and actionable.</div></div>
             <div class="work-item"><div class="work-item-title">Research panel revamp</div><div class="work-item-desc">Faster, more accessible user panel with Georgia's team</div></div>
           </div>
         </div>
@@ -251,7 +223,7 @@
           </div>
           <div class="work-items">
             <div class="work-item"><div class="work-item-title">Jira audit</div><div class="work-item-desc">Fix incorrect lane setups so every lane's data is reliable</div></div>
-            <div class="work-item"><div class="work-item-title">Global roadmap and stakeholder views</div><div class="work-item-desc">Live exec-facing roadmap inside Jira, no separate deck required</div></div>
+            <div class="work-item"><div class="work-item-title">Global roadmap & stakeholder views</div><div class="work-item-desc">Live exec-facing roadmap inside Jira, no separate deck required</div></div>
             <div class="work-item"><div class="work-item-title">Knowledge management</div><div class="work-item-desc">Structured Confluence with AI consumption enabled</div></div>
           </div>
         </div>
@@ -261,11 +233,9 @@
             <div><div class="person-name">Ciara Keane</div><div class="person-role">Lead</div></div>
           </div>
           <div class="work-items">
-            <div class="work-item"><div class="work-item-title">Unblock key MCPs</div><div class="work-item-desc">Jira, Slack, GitHub, Figma and others</div></div>
-            <div class="work-item"><div class="work-item-title">Product AI Agent</div><div class="work-item-desc">Build a MetaMask-specific agent that automates core ProdOps workflows</div></div>
-            <div class="work-item"><div class="work-item-title">Golden AI tools path</div><div class="work-item-desc">Define the approved, security-supported toolset for every PM</div></div>
-            <div class="work-item"><div class="work-item-title">AI in the product development lifecycle</div><div class="work-item-desc">Embed AI into how MetaMask plans, builds, and ships</div></div>
-            <div class="work-item"><div class="work-item-title">H2 product strategy</div><div class="work-item-desc">Central strategy doc and H2 planning with leadership</div></div>
+            <div class="work-item"><div class="work-item-title">AI enablement</div><div class="work-item-desc">Unblocking key MCPs, defining a security-approved AI tools path, and embedding AI into how MetaMask plans, builds, and ships</div></div>
+            <div class="work-item"><div class="work-item-title">H2 product strategy</div><div class="work-item-desc">Building a system with leadership that makes clear what we are prioritising in H2, why those bets matter, and how we track and share progress across the organisation</div></div>
+            <div class="work-item"><div class="work-item-title">Team development</div><div class="work-item-desc">Enabling, unblocking, and supporting the ProdOps team to perform at their best — building a team culture where every pillar operates with confidence and autonomy.</div></div>
           </div>
         </div>
       </div>
@@ -276,10 +246,6 @@
     <div class="slide-label">06 — Q2 outcomes</div>
     <h2>What changes by end of quarter</h2>
     <div class="outcomes-grid">
-      <div class="outcome-card wide">
-        <div class="outcome-label">AI embedded in how we work</div>
-        <div class="outcome-text">Key MCPs unblocked across Jira, Slack, GitHub and Figma. A golden AI tools path defined and security-approved. A Product AI Agent built for MetaMask. AI embedded into the product development lifecycle so it compounds on every initiative, every quarter.</div>
-      </div>
       <div class="outcome-card">
         <div class="outcome-label">Single source of truth</div>
         <div class="outcome-text">Jira is set up correctly across every lane. Reporting, release management, and dependencies run inside it. Stakeholders have a live roadmap view without asking for one.</div>
@@ -290,11 +256,7 @@
       </div>
       <div class="outcome-card">
         <div class="outcome-label">User insight in the product process</div>
-        <div class="outcome-text">Research and CS signals accessible inside Jira. PMs reach for user insight as a natural part of planning, not a separate project they have to commission.</div>
-      </div>
-      <div class="outcome-card">
-        <div class="outcome-label">H2 ready</div>
-        <div class="outcome-text">Strategy document aligned with leadership. Q3 planning shaped by a clear H2 revenue direction.</div>
+        <div class="outcome-text">Research and CS signals accessible inside Jira. Intercom dashboards audited with a plan to improve them, and connected to HeyMarvin. PMs reach for user insight as a natural part of planning.</div>
       </div>
     </div>
   </div>
